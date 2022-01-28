@@ -21,7 +21,7 @@
         inherit (dns) combinators;
         inherit (dns) types;
         inherit (dns) mkReverseRecord;
-        toString = name: zone: builtins.toString (dns.evalZone name zone);
+        toString = name: zone: builtins.toString (dns.evalZone zone);
       } // dns.combinators;
 
     } // flake-utils.lib.eachDefaultSystem (system:
